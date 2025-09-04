@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Login - ShopHere</title>
+  </head>
+  <body>
+    <header>
+      <a href="index.html">
+        <img src="images/shophere-logo.png" alt="Logo ShopHere" class="logo" />
+      </a>
+      <div class="header-nav">
+        <div id="user-nav">
+          <!-- User navigation (Login/Logout, My Orders) will be injected here -->
+        </div>
+        <div id="cart-icon-wrapper" class="cart-icon-wrapper">
+          <svg
+            id="svg-icone"
+            width="22"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
+            />
+          </svg>
+          <span
+            id="cart-item-count"
+            class="cart-item-count cart-item-count--hidden"
+            >0</span
+          >
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="auth-section">
+        <div class="container container--auth">
+          <div class="auth-card">
+            <h1>Login</h1>
+            <form id="login-form">
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <div class="password-wrapper">
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    required
+                  />
+                  <button
+                    type="button"
+                    class="toggle-password"
+                    aria-label="Show password"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="eye-icon"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M2.036 12.322a1.012 1.012 0 010-.639l4.43-7.086a1.012 1.012 0 011.586 0l4.43 7.086a1.012 1.012 0 010 .639l-4.43 7.086a1.012 1.012 0 01-1.586 0l-4.43-7.086z"
+                      />
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                      />
+                    </svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="eye-slash-icon hidden"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M3.98 8.223A10.477 10.477 0 001.934 12C3.226 16.338 7.244 19.5 12 19.5c.993 0 1.953-.138 2.863-.395M6.228 6.228A10.45 10.45 0 0112 4.5c4.756 0 8.773 3.162 10.065 7.498a10.523 10.523 0 01-4.293 5.774M6.228 6.228L3 3m3.228 3.228l3.65 3.65m7.894 7.894L21 21m-3.228-3.228l-3.65-3.65m0 0a3 3 0 10-4.243-4.243m4.243 4.243l-4.243-4.243"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <button type="submit" class="button--primary">Login</button>
+              <p id="login-error" class="error-message"></p>
+            </form>
+            <div class="auth-extra-links">
+              <a href="/forgot-password.html">Forgot Password?</a>
+            </div>
+            <p class="auth-switch">
+              New customer? <a href="/register.html">Create an account</a>
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <!-- O rodapé pode ser adicionado aqui se desejado -->
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="auth-helpers.js"></script>
+    <script src="login.js"></script>
+  </body>
+</html>

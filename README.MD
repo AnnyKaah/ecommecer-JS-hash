@@ -1,55 +1,157 @@
-# 🛍️ ShopHere E-commerce Project
+# 🛍️ ShopHere - Full-Stack E-commerce Platform
 
-![Status](https://img.shields.io/badge/status-in%20progress-yellow)
+![ShopHere Showcase](https://via.placeholder.com/1200x600.png?text=ShopHere+Project+Showcase)
 
-## 📝 Description
+**Live Demo:** [https://shophere.example.com](https://shophere.example.com) _(Replace with your live project link)_
 
-This project is a front-end implementation of an e-commerce platform, inspired by the layout and functionality of Mercado Livre. It was developed as part of a programming immersion course to practice and demonstrate skills in HTML and CSS.
+---
 
-Currently, the project consists of two main pages:
+## 🚀 About The Project
 
-- A homepage that displays a list of all products.
-- A product detail page with more information and purchasing options.
+**ShopHere** is a complete and modern e-commerce platform built with a Node.js, Express, and MongoDB backend, and a dynamic frontend using vanilla HTML, CSS, and JavaScript. This project was developed to showcase full-stack development skills, from creating a secure RESTful API to implementing a rich and responsive user interface.
 
-## 🚧 Project Status
+The goal was to create a fluid and secure shopping experience by incorporating essential features of a real-world e-commerce site, such as user authentication, cart management, order history, and a complete checkout flow.
 
-The project is **in progress**. The basic structure and styling with HTML and CSS are complete. The next steps involve adding interactivity with **JavaScript** and developing a back-end with **Node.js**.
+---
 
-## ✨ Features (Current)
+## ✨ Key Features
 
-- **Product Listing:** Grid view of available products on the homepage.
-- **Product Detail Page:** A dedicated page for each product featuring:
-  - An image gallery (thumbnails and a large view).
-  - Product description and specifications.
-  - Pricing, discount, and installment information.
-  - An order section with a quantity selector.
+### Backend & API
 
-## 🚀 Roadmap / Next Steps
+- **RESTful API:** Robust and scalable architecture with Express.
+- **JWT Authentication:** Secure login and registration system using JSON Web Tokens.
+- **Password Recovery:** Complete "Forgot Password" flow with secure, expiring token generation.
+- **Strong Password Validation:** Backend and frontend validation to enforce strong password policies (min. 8 characters, uppercase, lowercase, number, and special character).
+- **Order Management:** Logic to create, view, and cancel orders.
+- **Stock Control:** Inventory is automatically updated when an order is placed or canceled.
+- **MongoDB Database:** Data modeling with Mongoose for Products, Users, Carts, and Orders.
 
-- [ ] **JavaScript Interactivity:**
-  - Image gallery that changes the main image when a thumbnail is clicked.
-  - Functional "Add to cart" button.
-  - Dynamic content loading.
-- [ ] **Node.js Back-end:**
-  - API to manage products.
-  - User authentication.
-  - Shopping cart management.
-  - Order processing.
+### Frontend & UX
 
-## 💻 Technologies Used
+- **Persistent Shopping Cart:** Works for both logged-in users (synced with the database) and guests (using `localStorage`).
+- **Responsive Interface:** Modern and adaptive design for desktops and mobile devices.
+- **Animated Transitions:** Smooth animations between pages and on user actions for a more fluid experience.
+- **Visual Notifications:** Instant feedback (toasts) when adding items to the cart.
+- **Password Visibility Toggle:** An icon to show/hide the password, improving usability in forms.
+- **Dynamic Pages:** Product and listing page content is loaded dynamically from the API.
 
-- **HTML5**
-- **CSS3** (with Flexbox and Grid)
+---
 
-## 🔧 How to Run
+## 🛠️ Tech Stack
 
-1.  Clone this repository.
-2.  Navigate to the project folder.
-3.  Open the `index.html` or `product.html` file directly in your browser.
+- **Backend:** Node.js, Express.js
+- **Database:** MongoDB with Mongoose
+- **Authentication:** JSON Web Token (JWT), bcrypt.js
+- **Frontend:** HTML5, CSS3, JavaScript (ES6+)
+- **Environment:** Dotenv
+- **Utilities:** Nodemon
 
-## ✒️ Author
+---
 
-**Anny Karoline**
+## 🏁 Getting Started
 
-- GitHub: `https://github.com/AnnyKaah`
-- LinkedIn: `https://br.linkedin.com/in/annykarolinedecarvalhomartins`
+Follow the steps below to set up and run the project in your local environment.
+
+### Prerequisites
+
+- Node.js (v14 or higher)
+- MongoDB (a local server or a MongoDB Atlas instance)
+
+### Installation
+
+1.  **Clone the repository:**
+
+    ```sh
+    git clone https://github.com/AnnyKaah/ecommecer-JS-hash?tab=readme-ov-file
+    cd ecommecer-JS-hash-main
+    ```
+
+2.  **Install dependencies:**
+
+    ```sh
+    npm install
+    ```
+
+3.  **Set up environment variables:**
+    Create a `.env` file in the project root and add the following variables:
+
+    ```env
+    # Server Port
+    PORT=3000
+
+    # MongoDB Connection URI
+    MONGO_URI=mongodb://localhost:27017/shophere
+
+    # JWT Secret
+    JWT_SECRET=your_super_secret_key
+    ```
+
+4.  **Seed the database (Optional but recommended):**
+    Run the seeder to add sample products to the database.
+
+    ```sh
+    npm run data:import
+    ```
+
+    _To clear the database, use `npm run data:destroy`._
+
+5.  **Start the server:**
+
+    ```sh
+    npm run dev
+    ```
+
+6.  **Access the application:**
+    Open your browser and navigate to `http://localhost:3000`.
+
+---
+
+## 📝 Endpoints da API
+
+The API follows RESTful principles. All private endpoints require a `Bearer Token` in the authorization header.
+
+- `POST /api/auth/login`: Authenticates a user.
+- `POST /api/auth/register`: Registers a new user.
+- `POST /api/auth/forgot-password`: Starts the password recovery flow.
+- `PUT /api/auth/reset-password/:token`: Resets the password with a valid token.
+
+- `GET /api/products`: Returns all products.
+- `GET /api/products/:id`: Returns a specific product.
+
+- `GET /api/cart`: (Private) Returns the logged-in user's cart.
+- `POST /api/cart`: (Private) Adds an item to the cart.
+- `PUT /api/cart/:productId`: (Private) Updates an item's quantity.
+- `DELETE /api/cart/:productId`: (Private) Removes an item from the cart.
+
+- `POST /api/orders`: (Private) Creates a new order from the cart.
+- `GET /api/orders/myorders`: (Private) Returns the logged-in user's orders.
+- `PUT /api/orders/:id/cancel`: (Private) Cancels an order.
+
+---
+
+## 🖼️ Screenshots
+
+| Homepage                                    | Product Page                                        |
+| ------------------------------------------- | --------------------------------------------------- |
+| !Homepage(./docs/screenshorts/homepage.png) | !Product Page(./docs/screenshorts/product-page.png) |
+
+| Shopping Cart                                | Login Page                                      |
+| -------------------------------------------- | ----------------------------------------------- |
+| !Shopping Cart(./docs/screenshorts/cart.png) | !Login Page(./docs/screenshorts/login-page.png) |
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+<p align="center">
+  Made with ❤️ by <strong>Anny Karoline</strong>
+</p>
+<p align="center">
+  <a href="https://br.linkedin.com/in/annykarolinedecarvalhomartins" target="_blank">LinkedIn</a> • 
+  <a href="https://github.com/AnnyKaah" target="_blank">GitHub</a> • 
+  <a href="https://github.com/AnnyKaah/meu-portifolio#" target="_blank">Portfolio</a>
+</p>

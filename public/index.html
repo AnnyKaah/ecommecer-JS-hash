@@ -1,0 +1,148 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>ShopHere</title>
+  </head>
+  <body>
+    <header>
+      <a href="index.html">
+        <img src="images/shophere-logo.png" alt="Logo ShopHere" class="logo" />
+      </a>
+      <div class="header-nav">
+        <div id="user-nav">
+          <!-- User navigation (Login/Logout, My Orders) will be injected here -->
+        </div>
+        <div id="cart-icon-wrapper" class="cart-icon-wrapper">
+          <svg
+            id="svg-icone"
+            width="22"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
+            />
+          </svg>
+          <span
+            id="cart-item-count"
+            class="cart-item-count cart-item-count--hidden"
+            >0</span
+          >
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="product-section">
+        <div class="container">
+          <h1>All Products</h1>
+
+          <div class="products">
+            <!-- Products will be dynamically inserted here by JavaScript -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="features">
+          <div class="feature">
+            <img src="images/payment.svg" alt="Feature Icon" />
+
+            <h2 class="feature__h2">Choose how to pay</h2>
+
+            <p>
+              At Shop Here Pay, you can pay with credit card, debit card, bank
+              slip, or Pix. You can also split your purchase into up to 12
+              payments with our Credit Line — no card needed.
+            </p>
+          </div>
+
+          <div class="vertical-bar"></div>
+
+          <div class="feature">
+            <img src="images/shipping.svg" alt="Feature Icon" />
+
+            <h2 class="feature__h2">Free shipping on orders over $19</h2>
+
+            <p>
+              Sign up at Shop Here and enjoy free shipping on thousands of
+              products.
+            </p>
+          </div>
+
+          <div class="vertical-bar"></div>
+
+          <div class="feature">
+            <img src="images/protected.svg" alt="Feature Icon" />
+
+            <h2 class="feature__h2">Security from start to finish</h2>
+
+            <p>
+              Didn't like what you bought? Just return it! At Shop Here, you’re
+              always protected — no matter what.
+            </p>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>© 2025 ShopHere. All rights reserved.</p>
+          <p>
+            ShopHere Digital Commerce Ltd. | Tax ID (CNPJ): 12.345.678/0001-99
+            123 Orchid Street – Suite 45, Virtual Garden District São Paulo –
+            SP, ZIP Code 01234-567, Brazil
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <div class="overlay overlay--hidden"></div>
+
+    <div class="cart cart--hidden">
+      <div class="cart-title">
+        <h2>Cart</h2>
+        <button class="cart__close-button">X</button>
+      </div>
+      <div class="cart-items">
+        <!-- Cart items will be inserted here by JavaScript -->
+      </div>
+      <div class="order-cart">
+        <p>
+          <span class="bold"> Price:</span>
+          <span id="cart-total-price">$ 0.00</span>
+        </p>
+        <button class="checkout-button">
+          <span>Place order</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            class="checkout-button__icon"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M16.5 10.5V6.75a4.5 4.5 0 0 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="notification-container" class="notification-container"></div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
