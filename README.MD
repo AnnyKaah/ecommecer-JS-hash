@@ -1,9 +1,5 @@
 # 🛍️ ShopHere - Full-Stack E-commerce Platform
 
-![ShopHere Showcase](https://via.placeholder.com/1200x600.png?text=ShopHere+Project+Showcase)
-
-**Live Demo:** [https://shophere.example.com](https://shophere.example.com) _(Replace with your live project link)_
-
 ---
 
 ## 🚀 About The Project
@@ -62,8 +58,7 @@ Follow the steps below to set up and run the project in your local environment.
 1.  **Clone the repository:**
 
     ```sh
-    git clone https://github.com/AnnyKaah/ecommecer-JS-hash?tab=readme-ov-file
-    cd ecommecer-JS-hash-main
+    git clone https://github.com/AnnyKaah/ecommecer-JS-hash.git
     ```
 
 2.  **Install dependencies:**
@@ -106,7 +101,7 @@ Follow the steps below to set up and run the project in your local environment.
 
 ---
 
-## 📝 Endpoints da API
+## 📝 API Endpoints
 
 The API follows RESTful principles. All private endpoints require a `Bearer Token` in the authorization header.
 
@@ -131,13 +126,13 @@ The API follows RESTful principles. All private endpoints require a `Bearer Toke
 
 ## 🖼️ Screenshots
 
-| Homepage                                    | Product Page                                        |
-| ------------------------------------------- | --------------------------------------------------- |
-| !Homepage(./docs/screenshorts/homepage.png) | !Product Page(./docs/screenshorts/product-page.png) |
+| Homepage  | Product Page  |
+| --------- | ------------- |
+| !Homepage | !Product Page |
 
-| Shopping Cart                                | Login Page                                      |
-| -------------------------------------------- | ----------------------------------------------- |
-| !Shopping Cart(./docs/screenshorts/cart.png) | !Login Page(./docs/screenshorts/login-page.png) |
+| Shopping Cart  | Login Page  |
+| -------------- | ----------- |
+| !Shopping Cart | !Login Page |
 
 ---
 
