@@ -126,13 +126,22 @@ The API follows RESTful principles. All private endpoints require a `Bearer Toke
 
 ## 🖼️ Screenshots
 
-| Homepage  | Product Page  |
-| --------- | ------------- |
-| !Homepage | !Product Page |
+<p align="center">
+  <img src="https://github.com/AnnyKaah/ecommecer-JS-hash/raw/main/docs/screenshots/homepage.png" alt="Homepage" width="200" />
+  <img src="https://github.com/AnnyKaah/ecommecer-JS-hash/raw/main/docs/screenshots/product-page.png" alt="Product Page" width="200" />
+</p>
+<p align="center">
+  Homepage &nbsp;&nbsp;&nbsp; Product Page
+</p>
 
-| Shopping Cart  | Login Page  |
-| -------------- | ----------- |
-| !Shopping Cart | !Login Page |
+<p align="center">
+  <img src="https://github.com/AnnyKaah/ecommecer-JS-hash/raw/main/docs/screenshots/cart.png" alt="Shopping Cart" width="200" />
+  <img src="https://github.com/AnnyKaah/ecommecer-JS-hash/raw/main/docs/screenshots/login-page.png" alt="Login Page" width="200" />
+</p>
+<p align="center">
+  Shopping Cart &nbsp;&nbsp;&nbsp; Login Page
+</p>
+
 
 ---
 
